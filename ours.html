@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>ours</title>
+        <link rel="stylesheet" type="text/css" href="css/base.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/ours.css">
+	</head>
+
+	<body>
+
+		<!-- swiper左边固定fixed -->
+		<div id="indexLeft">
+			<div class="indexLeftBr ma">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<div class="indexLeftZx norepeat ma"></div>
+		</div>
+		<!-- swiper左边固定fixed  End -->
+		<!-- swiper底端NAV -->
+		<div id="footerNav">
+			<div class="Logo">
+				<a href=""><img class="vm ml20" src="img/logo.png"></a>
+			</div>
+			<div class="calendar">
+				<span></span>
+				<i class="norepeat"></i>
+			</div>
+			<ul class="clear" id="navSelect">
+				<div id="navCurrent"></div>
+				<li><a href="dspInfor.html">51DSP介绍</a></li>
+				<li><a href="video.html">视频广告</a></li>
+				<li><a href="mobile.html">移动端广告</a></li>
+				<li><a href="ad.html">外包项目</a></li>
+				<li><a href="ours.html">关于我们</a></li>
+				<li><a href="ours.html">联系方式</a></li>
+			</ul>
+		</div>
+		<!-- swiper底端NAV End-->
+
+		<!-- 第一页 -->
+		<div class="slide_One clear">
+			<div class="slide_OneTop clear"><a href="index.html" style="color: #fff;">51DSP.cn</a></div>
+			<div class="slideBg clear">
+				<img src="img/light.png" id="lights">
+				<img src="img/lightsBottom.png" id="lightsBtm">
+			</div>
+		</div>
+
+		<div class="main-con">
+			<div class="main-bt">咨询留言</div>
+			<div class="main-yq">请仔细填写以下的内容,方便准确提供投放方案</div>
+			<form id="biaodan">
+				<div class="input1">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：
+					<input type="text" class="inp" onblur="yz(0)">
+				</div>
+				<div class="input1">联系电话：
+					<input type="text" class="inp" onblur="yz(1)">
+				</div>
+				<div class="input1">邮箱地址：
+					<input type="text" class="inp" onblur="yz(2)">
+				</div>
+				<div class="input2">广告需求：
+					<input type="radio" value="" name="ad">
+					<label name="ad" style="margin-left:0px;">贴片广告</label>
+					<input type="radio" value="" name="ad">
+					<label name="ad">暂停广告</label>
+					<input type="radio" value="" name="ad">
+					<label name="ad">移动端广告</label>
+					<input type="radio" value="" name="ad" class="rd">
+					<label name="ad" style="margin-left:106px;" id="lab3">其他</label>
+					<input type="text" class="inp2">
+				</div>
+				<div class="yuji">预计花费：
+					<input type="radio" value="" name="money" checked="checked">
+					<label name="money" style="margin-left:0px;">5万内</label>
+					<input type="radio" value="" name="money">
+					<label name="money">5~30万</label>
+					<input type="radio" value="" name="money">
+					<label name="money">30~100万</label>
+					<input type="radio" value="" name="money">
+					<label name="money">100万以上</label>
+				</div>
+				<div class="txt clear">
+					<div class="ly">留言备注：</div>
+					<textarea></textarea>
+				</div>
+				<div class="sub">
+					<i></i>
+					<input type="submit" value="提交留言" class="sub2 inpnoinput">
+				</div>
+			</form>
+		</div>
+
+		<div class="slidefter">
+			<p>京ICP备09083201 号 京 ICP 证 0704 号 京公网安备：11010502026763
+				<br>Copyright&copy; 2015 51dsp.com All Rights Reserved</p>
+		</div>
+
+		<script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+		<script type="text/javascript" src="js/ours.js"></script>
+	</body>
+
+</html>
