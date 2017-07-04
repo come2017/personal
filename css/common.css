@@ -13,19 +13,76 @@ body {
 	padding: 0;
 	min-width: 1122px;
 }
-* {
-	margin: 0 auto;
-	padding: 0;
+/*index_load 加载的样式 start*/
+.index_load{ 
+	background:#000;
+	z-index:3;
 }
-ul li {
-	list-style: none;
+.load_box{ 
+	height:250px;
+	width:100%;
+	top:50%;
+	margin-top:-156px;
+    z-index:2;
 }
-a {
-	text-decoration: none;
+.load_title{ 
+	width:500px;
+	height:40px;
 }
-img {
-	border: none;
+.load_title:before{
+    content: "";
+    display: block;
+    width:100px;
+    height:3px;
+    background:#fff;
+    position:absolute;
+    left:0px;
+    top:19px;
+    border-radius:10px;
 }
+.load_title:after{
+    content: "";
+    display: block;
+    width:100px;
+    height:3px;
+    background:#fff;
+    position:absolute;
+    right:0px;
+    top:19px;
+    border-radius:10px;
+}
+.load_title p{ 
+	color:#fff;
+	font-size:36px;
+	line-height:40px;
+	padding:0 30px;
+	z-index:1;
+}
+.load_text{ 
+	margin-top:30px;
+	font-size:28px;
+	letter-spacing:8px;
+}
+.load_progress{ 
+	width:100%;
+	padding:2px 0;
+	background:#fff;
+	overflow:hidden;
+    z-index:2;
+}
+.load_progress .load_line{ 
+	height:4px;
+	width:10%;
+	background:#000;
+}
+/*index_load 加载的样式 end*/
+
+/*index_body 主体的样式 start*/
+.index_body{ 
+	height:100%;
+}
+/*index_body 主体的样式 end*/
+
 .norepeat {
 	background: url(../img/allBg.png) no-repeat;
 }
