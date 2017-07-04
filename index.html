@@ -13,7 +13,7 @@
 
 	<body>
 		
-        <div class="index_load pa w100 h100">
+        <div class="index_load pa w100 h100" id="index_load">
         	<div class="load_box pa left0">
             	<img class="ma d_block" src="img/loadLogo.png">
                 <div class="load_title ma bs pr tc">
@@ -28,16 +28,15 @@
             <canvas id="canvas" class="w100 h100 pa"></canvas>
             <script>
                 //宇宙特效
-                "use strict";
                 var canvas = document.getElementById('canvas'),
                         ctx = canvas.getContext('2d'),
                         w = canvas.width = document.querySelector("#canvas").offsetWidth ,
                         h = canvas.height = document.querySelector("#canvas").offsetHeight - 10,
 
-                        hue = 217,
+                        hue = 000,
                         stars = [],
                         count = 0,
-                        maxStars = 1300;//星星数量
+                        maxStars = 600;//星星数量
 
                 var canvas2 = document.createElement('canvas'),
                         ctx2 = canvas2.getContext('2d');
@@ -75,7 +74,7 @@
                 function maxOrbit(x, y) {
                     var max = Math.max(x, y),
                             diameter = Math.round(Math.sqrt(max * max + max * max));
-                    return diameter / 2;
+                    return diameter / 2.4;
                     //星星移动范围，值越大范围越小，
                 }
 
@@ -87,10 +86,10 @@
                     this.orbitX = w / 2;
                     this.orbitY = h / 2;
                     this.timePassed = random(0, maxStars);
-                    this.speed = random(this.orbitRadius) / 50000;
+                    this.speed = random(this.orbitRadius) / 100000;
                     //星星移动速度
                     this.alpha = random(2, 10) / 10;
-
+    
                     count++;
                     stars[count] = this;
                 }
@@ -117,7 +116,7 @@
 
                 function animation() {
                     ctx.globalCompositeOperation = 'source-over';
-                    ctx.globalAlpha = 0.5; //尾巴
+                    ctx.globalAlpha = 0.6; //尾巴
                     ctx.fillStyle = 'hsla(' + hue + ', 64%, 6%, 2)';
                     ctx.fillRect(0, 0, w, h)
 
