@@ -11,7 +11,7 @@ $(function() {
 	$(".swiper-container").css("width", function() {
 		var wid = $("body").width() - $("#indexLeft").width();
 		return wid + "px";
-	})
+	});
 	window.onresize = function() {
 		$("#indexLeft").css("height", function() {
 			var hg = $(".swiper-wrapper").height();
@@ -23,21 +23,17 @@ $(function() {
 		})
 	}
 
-})
+});
 
-
-
-var time = null;
-
-function today() {
-	var myDate = new Date();
-	var Years = myDate.getFullYear();
-	var Months = myDate.getMonth() + 1;
-	var Dates = myDate.getDate();
-	var Times = Years + "年" + Months + "月" + Dates + "日";
-	$(".calendar span").empty().append(Times);
-}
-time = setInterval(today, 1000)
+(function(){
+    //初始化时间
+    var myDate = new Date();
+    var Years = myDate.getFullYear();
+    var Months = myDate.getMonth() + 1;
+    var Dates = myDate.getDate();
+    var Times = Years + "年" + Months + "月" + Dates + "日";
+    $(".calendar span").empty().append(Times);
+})();
 
 
 
@@ -78,33 +74,6 @@ function navMove() {
 	}
 }
 
-
-
-
-
-$("#lights").animate({
-	"bottom": "80px"
-}, 600)
-
-// setInterval(lighter,600)
-
-// function lighter(){
-// 	$("#lights").animate({
-// 		"width":"400px","height":"550px",
-// 		"margin-left":"-200px",
-// 		"bottom":"20px"
-// 	},500).animate({
-// 		"width":"306px",
-// 		"height":"447px",
-// 		"margin-left":"-150px",
-// 		"bottom":"70px"
-// 	},500);
-// }
-
-
-$("#lightsBtm").delay(700).animate({
-	"width": "980px"
-}, 500)
 
 var mySwiper = new Swiper('.swiper-container', {
 	speed: 1000,

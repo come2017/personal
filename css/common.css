@@ -72,7 +72,7 @@ body {
 }
 .load_progress .load_line{ 
 	height:4px;
-	width:10%;
+	width:0%;
 	background:#000;
 }
 /*index_load 加载的样式 end*/
