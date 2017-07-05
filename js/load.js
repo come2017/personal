@@ -27,14 +27,15 @@
         ],
         len = imgList.length,
         n = 0,
-        cookie = window.localStorage.load;
+        cookie = window.localStorage.getItem("load");
 
     //循环添加地址
     for(var i=0; i<len; i++ ){
         imgList[i] = "img/" + imgList[i];
     };
-
+    console.log( cookie )
     if( cookie == null ){
+        window.localStorage.setItem("load",true);
         load.show();
         firstLoad();
     }else{
