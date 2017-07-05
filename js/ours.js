@@ -121,7 +121,7 @@ function navMove() {
 
 
 $("#lights").animate({
-	"bottom": "80px"
+	"bottom": "250px"
 }, 600)
 
 

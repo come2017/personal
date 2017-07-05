@@ -83,24 +83,8 @@ function navMove() {
 
 
 $("#lights").animate({
-	"bottom": "80px"
+	"bottom": "250px"
 }, 600)
-
-// setInterval(lighter,600)
-
-// function lighter(){
-// 	$("#lights").animate({
-// 		"width":"400px","height":"550px",
-// 		"margin-left":"-200px",
-// 		"bottom":"20px"
-// 	},500).animate({
-// 		"width":"306px",
-// 		"height":"447px",
-// 		"margin-left":"-150px",
-// 		"bottom":"70px"
-// 	},500);
-// }
-
 
 $("#lightsBtm").delay(700).animate({
 	"width": "980px"
