@@ -1,13 +1,10 @@
-(function(){
-
-
-
-
+$(function(){
     var
         num = 0,
         progress = $(".load_progress .load_line"),
         load = $("#index_load"),
         index_body = $(".index_body"),
+        loadScript = $("#loadScript"),
         imgList = [
         "loadLogo.png" ,
         "logo.png" ,
@@ -28,17 +25,19 @@
         ],
         len = imgList.length,
         n = 0,
-        cookie = window.localStorage.getItem("load");
+        cookie = window.localStorage.getItem("load"),
+        w = $(window).width();
+
 
     //循环添加地址
     for(var i=0; i<len; i++ ){
         imgList[i] = "img/" + imgList[i];
     };
-    console.log( cookie )
+
     if( cookie == null ){
-        //firstLoad();
+        firstLoad();
     }else{
-        //loadEnd();
+        loads();
     };
 
     //用户第一次打开页面
@@ -50,26 +49,38 @@
             img.src = imgList[i];
             img.onload = function(){
                 num++;
-                n = num/len*100;
-                progress.css("width", n + "%")
-                if( n === 100 ){
+                n = num/len*w;
+                progress.animate({
+                    "width": n
+                },100,"linear");
+                if( num/len == 1 ){
                     loadEnd();
                 };
             }
         }
     };
 
+    //用户第二次打开页面
+    function loads(){
+        progress.animate({
+            "width": w
+        },1000,"linear",function(){
+            loadEnd();
+        })
+    }
+
     //资源加载完毕 - 执行操作
     function loadEnd(){
-        load.remove();
         index_body.show();
+        load.remove();
+        loadScript.remove();
         $("#lights").animate({
             "bottom": "250px"
-        }, 600)
+        }, 600);
         $("#lightsBtm").delay(700).animate({
             "width": "980px"
-        }, 500)
+        }, 500);
     };
 
 
-})();
+});
