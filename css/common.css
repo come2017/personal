@@ -156,7 +156,7 @@ body {
 #footerNav ul {
 	width: 825px;
 	float: right;
-	font-size: 14px;
+	font-size: 16px;
 	color: #fff;
 	position: relative;
 	overflow: hidden;
@@ -200,9 +200,12 @@ body {
 	height: 66px;
 	line-height: 66px;
 	text-align: center;
-	font-size: 28px;
+	font-size: 24px;
 	color: #fff;
 	background: #21242a;
+}
+.slide_OneTop>a{
+    font-family: "sans-serif";
 }
 .swiper-container {
 	width: 100%;
