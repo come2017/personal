@@ -52,7 +52,7 @@ $(function(){
                 n = num/len*w;
                 progress.animate({
                     "width": n
-                },100,"linear");
+                },500,"linear");
                 if( num/len == 1 ){
                     loadEnd();
                 };
