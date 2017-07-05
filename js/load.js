@@ -7,6 +7,7 @@
         num = 0,
         progress = $(".load_progress .load_line"),
         load = $("#index_load"),
+        index_body = $(".index_body"),
         imgList = [
         "loadLogo.png" ,
         "logo.png" ,
@@ -35,15 +36,15 @@
     };
     console.log( cookie )
     if( cookie == null ){
-        window.localStorage.setItem("load",true);
-        load.show();
-        firstLoad();
+        //firstLoad();
     }else{
-        loadEnd();
+        //loadEnd();
     };
 
     //用户第一次打开页面
     function firstLoad(){
+        load.show();
+        window.localStorage.setItem("load",true);
         for(var i=0; i<len; i++ ){
             var img = new Image();
             img.src = imgList[i];
@@ -61,6 +62,7 @@
     //资源加载完毕 - 执行操作
     function loadEnd(){
         load.remove();
+        index_body.show();
         $("#lights").animate({
             "bottom": "250px"
         }, 600)
