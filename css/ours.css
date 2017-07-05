@@ -27,7 +27,7 @@ label.checked {background:url(../img/our1.png) no-repeat left center;}
 
 #lights{bottom:-447px;left:50%;margin-left:-150px;position: absolute;}
 #lightsBtm{bottom:80px;left:50%;margin-left:-490px;position: absolute; width:0px;float: left;}
-.slideBg{overflow: hidden; position: relative;}
+.slideBg{overflow: hidden; }
 
 .slidefter{ margin-top:30px;  text-align: center;  height:82px; background: #ba0013; width:100%; color:white;}
 .slidefter p{font-size:12px; line-height: 25px;padding-top: 14px;}

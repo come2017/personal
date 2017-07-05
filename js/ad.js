@@ -80,10 +80,8 @@ function navMove() {
 
 
 
-
-
 $("#lights").delay(500).animate({
-	"bottom": "80px"
+	"bottom": "250px"
 }, 500)
 
 //setInterval(lighter, 600)
