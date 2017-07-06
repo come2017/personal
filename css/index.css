@@ -66,10 +66,13 @@
 	padding-top: 100px;
 }
 .slide_TwoBox .dspInforE dl {
-	width: 100px;
+	width: 130px;
 	float: left;
-	margin-left: 110px;
+	margin-left: 90px;
 	display: inline;
+}
+.slide_TwoBox .dspInforE dl:last-child{
+    margin-left: 70px;
 }
 .slide_TwoBox .dspInforE dl dd {
 	text-align: center;
@@ -82,6 +85,7 @@
 }
 .slide_TwoBox .dspInforE dl.dspInfor0 {
 	margin-left: 35px;
+    width: 108px;
 }
 .slide_TwoBox .dspInforE dl.dspInfor1 dt {
 	width: 74px;
@@ -187,14 +191,14 @@
 	overflow: hidden;
 }
 .slide_ThreeBox ul li.li2 {
-	right: 40px;
+	right: -90px;
 	top: 10px;
 	width: 0px;
 	height: 30px;
 	overflow: hidden;
 }
 .slide_ThreeBox ul li.li3 {
-	left: 5px;
+	left: -7px;
 	top: 148px;
 	width: 0px;
 	height: 30px;
@@ -307,11 +311,13 @@
 	width: 78px;
 	height: 123px;
 	background-position: -108px -133px;
+    margin-left: 56px;
 }
 .slide_FourBox .dspAddD dl dt span.dspAddimg3 {
 	width: 102px;
 	height: 95px;
 	background-position: -191px -145px;
+    margin-left: 40px;
 }
 .slide_FourBox .dspAddD dl dd {
 	width: 194px;
@@ -371,8 +377,8 @@
 	background-color: #cb1d2e;
 }
 .slide_FiveBox {
-	width: 800px;
-	height: 560px;
+	width: 900px;
+	height: 650px;
 	overflow: hidden;
 	position: absolute;
 	top: 0;
@@ -415,40 +421,23 @@
 	height: 400px;
 	color: white;
 	margin-top: 14px;
-	position: relative;
+    position: absolute;
+    bottom: 0px;
+    left: 200px;
+}
+.slide_FiveBox .dspTelD .snail{
+    left: -26px;
+    top: -40px;
+    z-index:2;
+}
+.slide_FiveBox .dspTelD .snailshai{
+    left: 24px;
+    bottom: 91px;
 }
 .slide_FiveBox .dspTelD .dspTelDMob {
-	width: 300px;
-	height: 330px;
-	float: left;
-	margin: 14px 0 0 30px;
+	left:0px;
+    bottom: 40px;
 	display: none;
-}
-.slide_FiveBox .dspTelD .dspTelDMob:hover {
-	-webkit-animation: bounce 1s .2s ease both infinite;
-	-moz-animation: bounce 1s .2s ease both infinite;
-}
-@-webkit-keyframes bounce {
-	0%, 20%, 50%, 80%, 100% {
-		-webkit-transform: translateY(0)
-	}
-	40% {
-		-webkit-transform: translateY(-6px)
-	}
-	60% {
-		-webkit-transform: translateY(-3px)
-	}
-}
-@-moz-keyframes bounce {
-	0%, 20%, 50%, 80%, 100% {
-		-moz-transform: translateY(0)
-	}
-	40% {
-		-moz-transform: translateY(-6px)
-	}
-	60% {
-		-moz-transform: translateY(-3px)
-	}
 }
 .slide_FiveBox .dspTelD .dspTelDBubble {
 	width: 278px;

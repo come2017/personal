@@ -197,7 +197,7 @@ var mySwiper = new Swiper('.swiper-container', {
 
 
 			$(".slide_ThreeBox ul li.li2").delay(2800).animate({
-				"width": "154px"
+				"width": "310px"
 			}, 500)
 
 
@@ -207,7 +207,7 @@ var mySwiper = new Swiper('.swiper-container', {
 
 
 			$(".slide_ThreeBox ul li.li3").delay(2800).animate({
-				"width": "154px"
+				"width": "170px"
 			}, 500)
 
 
