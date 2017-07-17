@@ -23,22 +23,17 @@ $(function() {
 		})
 	}
 
-})
+});
 
-
-
-var time = null;
-
-function today() {
-	var myDate = new Date();
-	var Years = myDate.getFullYear();
-	var Months = myDate.getMonth() + 1;
-	var Dates = myDate.getDate();
-	var Times = Years + "年" + Months + "月" + Dates + "日";
-	$(".calendar span").empty().append(Times);
-}
-time = setInterval(today, 1000)
-
+(function(){
+    //初始化时间
+    var myDate = new Date();
+    var Years = myDate.getFullYear();
+    var Months = myDate.getMonth() + 1;
+    var Dates = myDate.getDate();
+    var Times = Years + "年" + Months + "月" + Dates + "日";
+    $(".calendar span").empty().append(Times);
+})();
 
 
 var navSelect = document.getElementById('navSelect');
@@ -78,27 +73,9 @@ function navMove() {
 	}
 }
 
-
-
 $("#lights").delay(500).animate({
 	"bottom": "250px"
-}, 500)
-
-//setInterval(lighter, 600)
-//
-//function lighter() {
-//	$("#lights").animate({
-//		"width": "400px",
-//		"height": "550px",
-//		"margin-left": "-200px",
-//		"bottom": "20px"
-//	}, 300).animate({
-//		"width": "306px",
-//		"height": "447px",
-//		"margin-left": "-150px",
-//		"bottom": "70px"
-//	}, 300);
-//}
+}, 500);
 
 
 $("#lightsBtm").animate({
@@ -123,7 +100,8 @@ var mySwiper = new Swiper('.swiper-container', {
 	keyboardControl: true,
 	mousewheelControl: true,
 
-	onSlideChangeStart: function(swiper) { //滑动start判断当前页面  
+	onSlideChangeStart: function(swiper) { //滑动start判断当前页面
+
 
 		//滑动start判断当前页面  end
 		// 第一页
@@ -134,98 +112,32 @@ var mySwiper = new Swiper('.swiper-container', {
 			}, 1000);
 		}
 
+		//第二页
+		if (mySwiper.activeIndex == "1" ) {
+            Grup( mySwiper.activeIndex );
+		};
 
-		// 第二页
-		if (mySwiper.activeIndex == "1") {
-			$(".T2thdisplay").animate({
-				opacity: 1
-			}, 2000)
-		}
+        //第三页
+        if (mySwiper.activeIndex == "2" ) {
 
-		//第三页
-		if (mySwiper.activeIndex == "2") {
-			var ps1 = $(".T3one span").eq(0);
-			var ps2 = $(".T3one span").eq(1);
-			var ps3 = $(".T3three span").eq(0);
-			var ps1img = $(".T3one div").eq(0);
-			var ps2img = $(".T3one div").eq(1);
-			var ps3img1 = $(".T3three div").eq(0);
-			var ps3img2 = $(".T3three div").eq(1);
-			$(".arrow").animate({ //箭头
-				height: "420px"
-			}, 3000)
-			$(function() { //三个标签添加样式
-				setTimeout(function() {
-					$(ps1).addClass("ps1")
-				}, 700)
-			})
-			$(function() {
-				setTimeout(function() {
-					$(ps2).addClass("ps2")
-				}, 2100)
-			})
-			$(function() {
-				setTimeout(function() {
-					$(ps3).addClass("ps3")
-				}, 1400)
-			})
+            Grup( mySwiper.activeIndex );
+        };
 
-			$(function() { //几个块
-				setTimeout(function() {
-					$(ps1img).addClass("ps1-img")
-				}, 1100)
-			})
-			$(function() {
-				setTimeout(function() {
-					$(ps2img).addClass("ps2-img")
-				}, 2500)
-			})
-			$(function() {
-				setTimeout(function() {
-					$(ps3img1).addClass("ps3-img1")
-				}, 1800)
-			})
-			$(function() {
-				setTimeout(function() {
-					$(ps3img2).addClass("ps3-img2")
-				}, 1900)
-			})
-		}
+        //第四页
+        if (mySwiper.activeIndex == "3" ) {
+
+            Grup( mySwiper.activeIndex );
+        };
 
 
-		//第四页
-		if (mySwiper.activeIndex == "3") {
-			// $(".outer").hover(function(){
-			// 	$(".inner").animate({marginTop:"-60px"},1000)
-			// },function(){
-			// 	$(".inner").animate({marginTop:"0px"},1000)
-			// })
-			var active = $(".inner");
-			active.each(function(index, obj) {
-				console.log(index);
-				console.log(obj);
-				$(obj).hover(function() {
-					$(this).animate({
-						marginTop: "-60px"
-					}, 500)
-				}, function() {
-					$(this).animate({
-						marginTop: "0px"
-					}, 500)
-				})
-			})
-		}
+        //第五页
+        if (mySwiper.activeIndex == "4" ) {
 
-		//第五页
-
+            Grup( mySwiper.activeIndex );
+        };
 
 	},
 	onSlideChangeEnd: function(swiper) {
-		//第一页
-		// if(mySwiper.activeIndex != "0"){
-		// 	$("#lights").css({"bottom":"-447px","left":"50%","margin-left":"-150px","position":"absolute"})
-		// 	$("#lightsBtm").css({"bottom":"80px","left":"50%","margin-left":"-490px","position":"absolute","width":"0px","float":"left"})
-		// }
 
 		//第二页
 		if (mySwiper.activeIndex != "1") {
@@ -234,7 +146,64 @@ var mySwiper = new Swiper('.swiper-container', {
 			})
 		}
 
-
-
 	}
-})
+
+});
+
+//成长经历
+function Grup( index ){
+    var grup = $(".swiper-slide:eq("+index+")").find(".grupUp");
+    var
+        n1 = 0,
+        n2 = 0,
+        h = grup.find(".ps_con:eq(0)").outerHeight(),
+        len = grup.find(".ps_con").length,
+
+        timer1 = null;
+
+    grup.find(".arrow").animate({ //箭头
+        height: h * len + "px"
+    }, 4000);
+
+    timer1 = setInterval(function(){
+        if( n1 > len ){
+            clearInterval( timer1 );
+            return;
+        };
+        //标题运动
+        if( n1%2 ){
+            n2 = ( n1 - 1 ) / 2 ;
+            grup.find(".grupUpRight span:eq("+n2+")").css({
+                opacity:1,
+                WebkitAnimation: "bounceInRight 1s .2s ease both",
+                MozAnimation: "bounceInRight 1s .2s ease both"
+            });
+            //块级内容运动
+            setTimeout(function() {
+                grup.find(".grupUpRight div:eq("+n2+")").css({
+                    WebkitAnimation: "pulse 1s .2s ease both",
+                    MozAnimation: "pulse 1s .2s ease both"
+                });
+            }, 300);
+        }else{
+            n2 = n1/2;
+            grup.find(".grupUpLeft span:eq("+n2+")").css({
+                opacity:1,
+                WebkitAnimation: "bounceInLeft 1s .2s ease both",
+                MozAnimation: "bounceInLeft 1s .2s ease both"
+            });
+            //块级内容运动
+            setTimeout(function() {
+                grup.find(".grupUpLeft div:eq("+n2+")").css({
+                    WebkitAnimation: "pulse 1s .2s ease both",
+                    MozAnimation: "pulse 1s .2s ease both"
+                });
+            }, 300);
+        };
+
+        n1++;
+
+    },700);
+
+
+}

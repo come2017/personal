@@ -6,7 +6,7 @@ $(function() {
 	})
 	$("#footerNav").css("top", function() {
 		var hg = $(".swiper-wrapper").height();
-		return (hg - 67) + "px";
+		return (hg - 66) + "px";
 	})
 	$(".swiper-container").css("width", function() {
 		var wid = $("body").width() - $("#indexLeft").width();
@@ -293,7 +293,7 @@ var mySwiper = new Swiper('.swiper-container', {
 		// 第五页
 		if (mySwiper.activeIndex == "4") {
 			$(".dspTelA").delay(300).animate({
-				"margin-left": "168px",
+				"margin-left": "68px",
 				"opacity": 1
 			}, 500)
 
@@ -310,7 +310,10 @@ var mySwiper = new Swiper('.swiper-container', {
 			}, 500)
 
 
-			$(".dspTelD .dspTelDMob").delay(1200).slideDown(500)
+			$(".dspTelD .dspTelDMob").delay(1200).slideDown(500,function(){
+                $(".snail").addClass("snailTransition");
+                $(".snailshai").addClass("snailshaiTransition");
+            })
 
 
 			$(".dspTelD .dspTelDBubble img").delay(1500).animate({
@@ -338,7 +341,7 @@ var mySwiper = new Swiper('.swiper-container', {
 		if (mySwiper.activeIndex == "5") {
 
 			$(".dspAboutA").delay(300).animate({
-				"margin-left": "168px",
+				"margin-left": "68px",
 				"opacity": 1
 			}, 500)
 

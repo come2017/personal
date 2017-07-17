@@ -13,7 +13,7 @@ $(function() {
 		return wid + "px";
 	})
 
-})
+});
 window.onresize = function() {
 	$("#indexLeft").css("height", function() {
 		var hg = $(".swiper-wrapper").height();
@@ -23,25 +23,17 @@ window.onresize = function() {
 		var wid = $("body").width() - $("#indexLeft").width();
 		return wid + "px";
 	})
-}
+};
 
-
-
-
-
-
-var time = null;
-
-function today() {
-	var myDate = new Date();
-	var Years = myDate.getFullYear();
-	var Months = myDate.getMonth() + 1;
-	var Dates = myDate.getDate();
-	var Times = Years + "年" + Months + "月" + Dates + "日";
-	$(".calendar span").empty().append(Times);
-}
-time = setInterval(today, 1000)
-
+(function(){
+    //初始化时间
+    var myDate = new Date();
+    var Years = myDate.getFullYear();
+    var Months = myDate.getMonth() + 1;
+    var Dates = myDate.getDate();
+    var Times = Years + "年" + Months + "月" + Dates + "日";
+    $(".calendar span").empty().append(Times);
+})();
 
 
 var navSelect = document.getElementById('navSelect');
@@ -147,39 +139,39 @@ var mySwiper = new Swiper('.swiper-container', {
 
 
 			$(".Infor_Twodl1").delay(1200).animate({
-				"left": "156px",
-				"top": "182px",
+				"left": "240px",
+				"top": "364px",
 				"opacity": 1
 			}, 500);
 
 			$(".Infor_Twodl2").delay(1200).animate({
-				"left": "482px",
-				"top": "54px",
+				"left": "470px",
+				"top": "238px",
 				"opacity": 1
 			}, 500);
 
 			$(".Infor_Twodl3").delay(1200).animate({
-				"left": "672px",
-				"top": "204px",
+				"left": "700px",
+				"top": "360px",
 				"opacity": 1
 			}, 500);
 
 			$(".Infor_Twodl4").delay(1200).animate({
-				"left": "672px",
-				"bottom": "94px",
+				"left": "700px",
+				"bottom": "220px",
 				"opacity": 1
 			}, 500);
 
 			$(".Infor_Twodl5").delay(1200).animate({
-				"left": "342px",
-				"bottom": "4px",
+				"left": "470px",
+				"bottom": "96px",
 				"opacity": 1
 			}, 500);
 
 
 			$(".Infor_Twodl6").delay(1200).animate({
-				"left": "130px",
-				"top": "400px",
+				"left": "240px",
+				"top": "615px",
 				"opacity": 1
 			}, 500);
 
@@ -281,7 +273,7 @@ var mySwiper = new Swiper('.swiper-container', {
 			}, 500)
 
 			$(".Infor_Fivebg1 div").delay(1200).animate({
-				"height": "110px"
+				"height": "120px"
 			}, 600)
 
 
@@ -319,7 +311,7 @@ var mySwiper = new Swiper('.swiper-container', {
 		if (mySwiper.activeIndex == "5") {
 
 			$(".Infor_SixBox dl").delay(500).animate({
-				"height": "384px"
+				"height": "400px"
 			}, 600)
 
 		}
@@ -363,70 +355,70 @@ var mySwiper = new Swiper('.swiper-container', {
 		if (mySwiper.activeIndex == "7") {
 
 			var pieData = [{
-					value: 18,
-					color: "#6b439c",
+					value: 10,
+					color: "#6b439c"
 
 				}, {
-					value: 8,
+					value: 10,
 					color: "#ae4097"
 				}, {
-					value: 8,
+					value: 10,
 					color: "#e44298"
 				}, {
-					value: 7,
+					value: 10,
 					color: "#ee1b24"
 				}
 
 				, {
-					value: 6,
+					value: 8,
 					color: "#f57025"
 				}, {
-					value: 5,
+					value: 6,
 					color: "#f78e23"
 				}, {
-					value: 2,
+					value: 6,
 					color: "#ffc010"
 				}, {
 					value: 5,
 					color: "#ffc010"
 				}, {
-					value: 4,
+					value: 5,
 					color: "#d0c700"
 				}, {
-					value: 4,
+					value: 5,
 					color: "#6bc100"
 				}, {
-					value: 3,
+					value: 5,
 					color: "#01a88e"
 				}, {
-					value: 3,
+					value: 5,
 					color: "#008ecc"
 				}, {
-					value: 3,
+					value: 5,
 					color: "#0655a4"
 				}, {
-					value: 3,
+					value: 5,
 					color: "#83cb12"
 				}, {
-					value: 3,
+					value: 5,
 					color: "#5ebff6"
 				}, {
-					value: 3,
+					value: 5,
 					color: "#7d0022"
 				}, {
-					value: 3,
+					value: 4,
 					color: "#a40035"
 				}, {
-					value: 2,
+					value: 4,
 					color: "#00736d"
 				}, {
-					value: 2,
+					value: 4,
 					color: "#81511c"
 				}, {
-					value: 2,
+					value: 4,
 					color: "#007130"
 				}, {
-					value: 1,
+					value: 3,
 					color: "#a84200"
 				}, {
 					value: 2,
@@ -435,7 +427,7 @@ var mySwiper = new Swiper('.swiper-container', {
 					value: 1,
 					color: "#eb6100"
 				}, {
-					value: 2,
+					value: 1,
 					color: "#ac6a00"
 				}
 

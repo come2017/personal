@@ -130,9 +130,6 @@ body {
 .Logo {
 	float: left;
 }
-.Logo img{ 
-	margin-top:-16px;
-}
 .calendar {
 	width: 180px;
 	float: left;
@@ -154,7 +151,7 @@ body {
 	background-position: 0 -74px;
 }
 #footerNav ul {
-	width: 825px;
+	width: 705px;
 	float: right;
 	font-size: 16px;
 	color: #fff;

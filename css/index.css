@@ -377,7 +377,7 @@
 	background-color: #cb1d2e;
 }
 .slide_FiveBox {
-	width: 900px;
+	width: 800px;
 	height: 650px;
 	overflow: hidden;
 	position: absolute;
@@ -388,7 +388,7 @@
 	margin: auto;
 }
 .slide_FiveBoxTop {
-	width: 488px;
+	width: 338px;
 	height: auto;
 }
 .slide_FiveBox .dspTelA {
@@ -396,7 +396,7 @@
 	height: 119px;
 	background-position: -126px -264px;
 	opacity: 0;
-	margin-left: -58px;
+	margin: auto;
 }
 .slide_FiveBox .dspTelB {
 	margin-top: 10px;
@@ -423,16 +423,81 @@
 	margin-top: 14px;
     position: absolute;
     bottom: 0px;
-    left: 200px;
+    left: 140px;
 }
 .slide_FiveBox .dspTelD .snail{
     left: -26px;
     top: -40px;
-    z-index:2;
+    z-index:3;
+    transform-origin: center;
+    transform: scale(0);
+}
+.slide_FiveBox .dspTelD .snail.snailTransition{
+    transition: top 0.4s 0s;
+    -webkit-animation: snailScale 0.6s .2s ease both;
+    -moz-animation: snailScale 0.6s .2s ease both;
+    animation: snailScale 0.6s .2s ease both;
+}
+@-webkit-keyframes snailScale {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    75% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@-moz-keyframes snailScale {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    75% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes snailScale {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    75% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 .slide_FiveBox .dspTelD .snailshai{
     left: 24px;
     bottom: 91px;
+    transform-origin: center;
+    transform: scale(0);
+    z-index: 2;
+}
+.slide_FiveBox .dspTelD .snailshai.snailshaiTransition{
+    transition: opacity 0.4s 0s;
+    -webkit-animation: snailScale 0.6s .2s ease both;
+    -moz-animation: snailScale 0.6s .2s ease both;
+    animation: snailScale 0.6s .2s ease both;
+}
+.slide_FiveBox .snail:hover.snailTransition{
+    top:-55px;
+}
+.slide_FiveBox .snail:hover + .snailshaiTransition{
+    opacity: 0.5;
 }
 .slide_FiveBox .dspTelD .dspTelDMob {
 	left:0px;
@@ -505,7 +570,7 @@
 	margin: auto;
 }
 .slide_SixBoxTop {
-	width: 488px;
+	width: 338px;
 	height: auto;
 }
 .slide_SixBox .dspAboutA {
@@ -682,7 +747,7 @@
 	color: white;
 }
 .slide_Seven .slidefter p {
-	font-size: 12px;
+	font-size: 20px;
 	line-height: 25px;
-	padding-top: 14px;
+	padding-top: 30px;
 }

@@ -21,19 +21,18 @@ $(function() {
 			return wid + "px";
 		})
 	}
-})
+});
 
-var time = null;
+(function(){
+    //初始化时间
+    var myDate = new Date();
+    var Years = myDate.getFullYear();
+    var Months = myDate.getMonth() + 1;
+    var Dates = myDate.getDate();
+    var Times = Years + "年" + Months + "月" + Dates + "日";
+    $(".calendar span").empty().append(Times);
+})();
 
-function today() {
-	var myDate = new Date();
-	var Years = myDate.getFullYear();
-	var Months = myDate.getMonth() + 1;
-	var Dates = myDate.getDate();
-	var Times = Years + "年" + Months + "月" + Dates + "日";
-	$(".calendar span").empty().append(Times);
-}
-time = setInterval(today, 1000)
 
 var navSelect = document.getElementById('navSelect');
 var selectLi = navSelect.getElementsByTagName('li');
@@ -120,7 +119,7 @@ var mySwiper = new Swiper('.swiper-container', {
 		    $(".dspInayC_right3").delay(3000).animate({"top":"-13px"},500);
 
 		    setTimeout(function(){
-	    		$(".dspInayC_icon1>em").addClass("Infor_Fivespan1bottom");
+	    		$(".dspInayC_icon1>ul").addClass("Infor_Fivespan1bottom");
 	    	},900)
 
 		}
@@ -140,107 +139,27 @@ var mySwiper = new Swiper('.swiper-container', {
 		}
 		// 第四页
 		if (mySwiper.activeIndex == "3") {
-			$(".front").mouseenter(function() {
-				$(this).animate({
-					"width": "0px"
-				}).stop(true, true).next().animate({
-					"width": "135px"
-				}).stop(true, true)
-			})
-			$(".back").mouseleave(function() {
-				$(this).animate({
-					"width": "0px"
-				}).prev().animate({
-					"width": "135px"
-				})
-			})
 		}
 
 		// 第五页
 		if (mySwiper.activeIndex == "4") {
-			setTimeout(function(){
-	    		$(".dspPosnA").addClass("Infor_Fivespan1bottomleft");
-	    	},900)
-			setTimeout(function(){
-	    		$(".dspPosnC").addClass("Infor_Fivespan1bottomright");
-	    	},900)
-	    	setTimeout(function(){
-	    		$(".dspPosnB").addClass("Infor_Fivespan1bottomdown");
-	    	},900)
             $('.dspPosn li ').mouseenter(function(){
-		    	$(this).children().animate({"bottom":"0px"});	
+		    	$(this).children().animate({"bottom":"0px"});
 		    })
 		    $('.dspPosn li ').mouseleave(function(){
 		    	$(this).children().stop(true,true).animate({"bottom":"-57px"});
 		    })
-		}
-		else{
-			$(".dspPosnA").removeClass("Infor_Fivespan1bottomleft");
-			$(".dspPosnC").removeClass("Infor_Fivespan1bottomright");
-			$(".dspPosnB").removeClass("Infor_Fivespan1bottomdown");
-		}
+		};
 		// 第六页
 		if (mySwiper.activeIndex == "5") {
-			$(".dspAbotC_c6 i").mouseenter(function() {
-				$(this).children().attr({
-					"src": "img/we61.png"
-				})
-			});
-			$(".dspAbotC_c6 i").mouseleave(function() {
-				$(this).children().attr({
-					"src": "img/we62.png"
-				})
-			});
-		}
+            $('.dspPosn li ').mouseenter(function(){
+                $(this).children().animate({"bottom":"0px"});
+            })
+            $('.dspPosn li ').mouseleave(function(){
+                $(this).children().stop(true,true).animate({"bottom":"-57px"});
+            })
 
-
-
-		// 第七页
-		if (mySwiper.activeIndex == "6") {
-
-
-
-			$(".Infor_Fivebg").delay(600).animate({
-				"width": "695px"
-			}, 2500)
-
-			setTimeout(function() {
-				$(".Infor_Fivebg1 span").addClass("Infor_Fivespan1");
-			}, 500)
-
-			$(".Infor_Fivebg1 div").delay(1200).animate({
-				"height": "110px"
-			}, 600)
-
-
-			setTimeout(function() {
-				$(".Infor_Fivebg2 span").addClass("Infor_Fivespan1bottom");
-			}, 900)
-
-			$(".Infor_Fivebg2 div").delay(1600).animate({
-				"height": "190px"
-			}, 600)
-
-
-
-			setTimeout(function() {
-				$(".Infor_Fivebg3 span").addClass("Infor_Fivespan1");
-			}, 1600)
-
-			$(".Infor_Fivebg3 div").delay(2200).animate({
-				"height": "190px"
-			}, 600)
-
-
-			setTimeout(function() {
-				$(".Infor_Fivebg4 span").addClass("Infor_Fivespan1top");
-			}, 2200)
-
-			$(".Infor_Fivebg4 div").delay(2500).animate({
-				"height": "190px"
-			}, 600)
-		}
-
+		};
 
 	}
 })

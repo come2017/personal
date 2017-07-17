@@ -15,6 +15,8 @@
 	bottom: 0;
 	right: 0;
 	margin: auto;
+    box-sizing: border-box;
+    padding-top: 100px;
 }
 .Infor_Two .Infor_Twop {
 	text-align: center;
@@ -26,7 +28,7 @@
 .InforImg {
 	position: absolute;
 	height: 355px;
-	top: 50px;
+	top: 120px;
 	left: 0;
 	bottom: 0;
 	right: 0;
@@ -38,6 +40,7 @@
 	width: 0;
 	height: 0;
 	margin-top: 110px;
+    margin: auto;
 }
 .Infor_Two dl {
 	position: absolute;
@@ -52,32 +55,28 @@
 }
 .Infor_Two dl dt i {
 	display: block;
-	float: left;
-}
-.Infor_Two dl dd {
-	float: left;
+	position: absolute;
 }
 .Infor_Two .Infor_Twodl1 {
-	width: 210px;
+	width: 60px;
 	top: 10px;
 	left: 10px;
 }
 .Infor_Two .Infor_Twodl1 dt {
 	clear: both;
-	margin-left: 80px;
 }
 .Infor_Two .Infor_Twodl1 dt span {
 	float: left;
-	background-position: -105px 0px;
-	width: 52px;
-	height: 48px;
+	background: url("../img/playboox.png") no-repeat center;
+	width: 60px;
+	height: 60px;
 }
 .Infor_Two .Infor_Twodl1 dt i {
 	background-position: -376px 0px;
 	width: 24px;
 	height: 25px;
-	margin: 20px 0 0 13px;
-	display: inline;
+    left: 66px;
+    top: 38px;
 }
 .Infor_Two .Infor_Twodl1 dd {
 	clear: both;
@@ -85,34 +84,34 @@
 	line-height: 46px;
 }
 .Infor_Two .Infor_Twodl2 {
-	width: 170px;
+	width: 110px;
 	top: 10px;
 	left: 500px;
 }
 .Infor_Two .Infor_Twodl2 dt {
-	clear: both;
 	float: left;
 }
 .Infor_Two .Infor_Twodl2 dt span {
-	background-position: 0px 0px;
-	width: 32px;
-	height: 48px;
+	background:url("../img/football.png") no-repeat center;
+	width: 60px;
+	height: 60px;
 }
 .Infor_Two .Infor_Twodl2 dt i {
 	background-position: -347px 0px;
-	margin: 5px 0 0 4px;
 	width: 24px;
 	height: 25px;
 	clear: both;
+    left: 18px;
+    bottom: -30px;
 }
 .Infor_Two .Infor_Twodl2 dd {
-	margin-left: 14px;
-	display: inline;
-	height: 70px;
-	line-height: 70px;
+    height: 60px;
+    line-height: 60px;
+    float: left;
+    width: 40px;
 }
 .Infor_Two .Infor_Twodl3 {
-	width: 210px;
+	width: 60px;
 	top: 10px;
 	left: 1000px;
 }
@@ -121,17 +120,16 @@
 }
 .Infor_Two .Infor_Twodl3 dt span {
 	float: left;
-	background-position: -347px 0px;
-	width: 25px;
-	height: 25px;
-	margin-top: 8px;
+    background: url("../img/outdoors.png") no-repeat center;
+    width: 60px;
+    height: 60px;
 }
 .Infor_Two .Infor_Twodl3 dt i {
-	width: 54px;
-	height: 53px;
-	margin-left: 13px;
-	display: inline;
-	background-position: -289px 0px;
+    background-position: -347px 0px;
+    width: 25px;
+    height: 25px;
+    top: 42px;
+    left: -33px;
 }
 .Infor_Two .Infor_Twodl3 dd {
 	clear: both;
@@ -139,7 +137,7 @@
 	line-height: 46px;
 }
 .Infor_Two .Infor_Twodl4 {
-	width: 210px;
+	width: 100px;
 	bottom: 10px;
 	left: 1000px;
 }
@@ -148,71 +146,67 @@
 }
 .Infor_Two .Infor_Twodl4 dt span {
 	float: left;
-	background-position: -405px 0px;
-	width: 25px;
-	height: 25px;
-	margin-top: 8px;
+	width: 70px;
+    height: 60px;
+    background: url("../img/game.png") no-repeat center;
 }
 .Infor_Two .Infor_Twodl4 dt i {
-	width: 54px;
-	height: 53px;
-	margin-left: 13px;
-	display: inline;
-	background-position: -42px 0px;
+    background-position: -347px 0px;
+    width: 25px;
+    height: 25px;
+    left: -30px;
+    top: 16px;
 }
 .Infor_Two .Infor_Twodl4 dd {
 	clear: both;
 	height: 46px;
-	line-height: 46px;
+    line-height: 32px;
+    float: left;
 }
 .Infor_Two .Infor_Twodl5 {
-	width: 210px;
+	width: 60px;
 	bottom: 0px;
 	left: 400px;
 }
 .Infor_Two .Infor_Twodl5 dt {} .Infor_Two .Infor_Twodl5 dt span {
-	background-position: -405px 0px;
-	width: 25px;
-	height: 25px;
-	margin-left: 18px;
+   width: 60px;
+   height: 60px;
+   background: url("../img/pet.png") no-repeat center;
 }
 .Infor_Two .Infor_Twodl5 dt i {
-	width: 63px;
-	height: 60px;
-	clear: both;
-	background-position: -56px -49px;
+    background-position: -347px 0px;
+    width: 25px;
+    height: 25px;
+    clear: both;
+    left: 18px;
+    top: -28px;
 }
 .Infor_Two .Infor_Twodl5 dd {
-	height: 84px;
-	line-height: 104px;
-	float: left;
+
 }
 .Infor_Two .Infor_Twodl6 {
-	width: 210px;
+	width: 60px;
 	top: 400px;
 	left: 0px;
 }
 .Infor_Two .Infor_Twodl6 dt {
 	clear: both;
 	float: left;
-	margin-left: 123px;
 }
 .Infor_Two .Infor_Twodl6 dt span {
-	background-position: 0px -48px;
-	width: 46px;
-	height: 46px;
+	background: url("../img/riding.png") no-repeat center;
+	width: 60px;
+	height: 60px;
 	float: left;
 }
 .Infor_Two .Infor_Twodl6 dt i {
-	background-position: -405px 0px;
-	margin: 15px 0 0 4px;
+    background-position: -347px 0px;
 	width: 24px;
 	height: 25px;
-	float: left;
+    right: -30px;
+    top: 0px;
 }
 .Infor_Two .Infor_Twodl6 dd {
-	margin-left: 14px;
-	display: inline;
 	height: 40px;
 	line-height: 40px;
 }
@@ -223,6 +217,7 @@
 }
 .Infor_ThreeBox {
 	width: 1000px;
+    padding-top: 100px;
 }
 .Infor_ThreeBox h2 {
 	height: 64px;
@@ -506,7 +501,7 @@
 	margin: 28px 0 0 20px;
 }
 .Infor_FourBoxTop div ul li {
-	padding: 0 19px;
+	padding: 0 18px;
 	float: left;
 	background: white;
 	font-size: 14px;
@@ -683,7 +678,7 @@
 	float: left;
 	line-height: 25px;
 	font-size: 12px;
-	padding-right: 29px;
+	padding-right: 18px;
 	font-size: 14px;
 }
 .Infor_Fivespan1 {
@@ -797,8 +792,8 @@
 	line-height: 25px;
 	font-size: 12px;
 	text-align: left;
-	width: 90px;
 	font-size: 14px;
+    padding-right: 12px;
 }
 .Infor_Fivebg3 {
 	position: absolute;
@@ -815,7 +810,7 @@
 	float: left;
 }
 .Infor_Fivebg3 div {
-	width: 185px;
+	width: 200px;
 	height: 0;
 	overflow: hidden;
 	float: left;
@@ -837,8 +832,8 @@
 	line-height: 25px;
 	font-size: 12px;
 	text-align: left;
-	width: 90px;
 	font-size: 14px;
+    padding-right: 14px;
 }
 .Infor_Fivebg4 {
 	position: absolute;
@@ -866,9 +861,8 @@
 	text-align: left;
 	font-size: 14px;
 	font-weight: bold;
-	line-height: 42px;
+	line-height: 22px;
 	float: left;
-	margin-left: 15px;
 	display: inline;
 }
 .Infor_Fivebg4 p strong {
@@ -883,8 +877,8 @@
 	line-height: 25px;
 	font-size: 12px;
 	text-align: left;
-	width: 82px;
 	font-size: 14px;
+    padding-right: 14px;
 }
 /*第六页*/
 
@@ -894,6 +888,7 @@
 }
 .Infor_SixBox {
 	width: 1000px;
+    padding-top: 150px;
 }
 .Infor_Six h2 {
 	margin-top: 4%;
@@ -942,6 +937,7 @@
 	line-height: 25px;
 	text-align: center;
 	font-size: 14px;
+    padding: 0 10px;
 }
 .Infor_SixBox dl .Infor_Sixdt1 {
 	margin-top: 10px;
@@ -1008,6 +1004,7 @@
 }
 .Infor_SevenBox {
 	width: 1026px;
+    padding-top: 150px;
 }
 .Infor_SevenMiddle {
 	position: relative;
@@ -1061,15 +1058,15 @@
 	line-height: 56px;
 }
 .Infor_SevenMiddle dl.Infor_SevenY1 {
-	left: 120px;
+	left: 109px;
 	top: 50px;
 }
 .Infor_SevenMiddle dl.Infor_SevenY2 {
-	left: 275px;
+	left: 285px;
 	top: 50px;
 }
 .Infor_SevenMiddle dl.Infor_SevenY3 {
-	left: 438px;
+	left: 449px;
 	top: 50px;
 }
 .Infor_SevenMiddle dl.Infor_SevenY4 {
@@ -1200,6 +1197,7 @@
 }
 .Infor_EightBox {
 	width: 1000px;
+    padding-top: 100px;
 }
 .Infor_Eighttop {
 	display: block;
@@ -1337,6 +1335,7 @@
 .Infor_NineBox {
 	width: 1150px;
 	height: 500px;
+    padding-top: 100px;
 }
 .Infor_NineBox h2 {
 	width: 0px;
@@ -1487,7 +1486,9 @@
 	}
 }
 /*第十页*/
-
+.Infor_TenBox{
+    padding-top: 100px;
+}
 .Infor_Ten {
 	background: #f2f0f0;
 }
@@ -1540,7 +1541,7 @@
 	color: white;
 }
 .Infor_TenBox .slidefter p {
-	font-size: 12px;
-	line-height: 25px;
-	padding-top: 14px;
+    font-size: 20px;
+    line-height: 25px;
+    padding-top: 30px;
 }

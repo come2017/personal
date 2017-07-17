@@ -23,22 +23,17 @@ $(function() {
 		})
 	}
 
-})
+});
 
-
-
-var time = null;
-
-function today() {
-	var myDate = new Date();
-	var Years = myDate.getFullYear();
-	var Months = myDate.getMonth() + 1;
-	var Dates = myDate.getDate();
-	var Times = Years + "年" + Months + "月" + Dates + "日";
-	$(".calendar span").empty().append(Times);
-}
-time = setInterval(today, 1000)
-
+(function(){
+    //初始化时间
+    var myDate = new Date();
+    var Years = myDate.getFullYear();
+    var Months = myDate.getMonth() + 1;
+    var Dates = myDate.getDate();
+    var Times = Years + "年" + Months + "月" + Dates + "日";
+    $(".calendar span").empty().append(Times);
+})();
 
 
 var navSelect = document.getElementById('navSelect');
