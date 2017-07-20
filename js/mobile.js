@@ -5,7 +5,7 @@ $(function() {
 	})
 	$("#footerNav").css("top", function() {
 		var hg = $(".swiper-wrapper").height();
-		return (hg - 67) + "px";
+		return (hg - 66) + "px";
 	})
 	$(".swiper-container").css("width", function() {
 		var wid = $("body").width() - $("#indexLeft").width();
@@ -33,39 +33,31 @@ $(function() {
     $(".calendar span").empty().append(Times);
 })();
 
+//导航
+(function(){
+    var navSelect = $("#navSelect"),
+        selectLi = navSelect.find("li"),
+        navCurrent = $("#navCurrent"),
+        navs = 3,
+        curnavs = 0,
+        num = 120;
 
-var navSelect = document.getElementById('navSelect');
-var selectLi = navSelect.getElementsByTagName('li');
-var navCurrent = document.getElementById("navCurrent");
-var navs = 2;
-var curnavs = 0;
-var navTime = null;
-for (var i = 0; i < selectLi.length; i++) {
-	selectLi[i].onmouseover = (function(num) {
-		return function() {
-			navs = num;
-		}
-	})(i);
-	selectLi[i].onmouseout = (function(num) {
-		return function() {
-			navs = 2;
-		}
-	})(i);
-}
-navTime = setInterval(navMove, 10)
+    animas( navs );
 
-function navMove() {
-	if (navCurrent.offsetLeft < 120 * navs) {
-		navCurrent.style.left = navCurrent.offsetLeft + 10 + "px";
-		curnavs = navs;
-	} else if (navs < curnavs) {
-		navCurrent.style.left = navCurrent.offsetLeft - 10 + "px";
-	} else if (navs == 0) {
-		if (navCurrent.offsetLeft > 0) {
-			navCurrent.style.left = navCurrent.offsetLeft - 10 + "px";
-		}
-	}
-}
+    selectLi.on("mouseover" , function(){
+        curnavs = $(this).index() - 1;
+        animas( curnavs )
+    });
+    selectLi.on("mouseout" , function(){
+        animas( navs )
+    });
+
+    function animas( type ){
+        navCurrent.stop().animate({
+            left : type * num + "px"
+        });
+    };
+})();
 
 
 

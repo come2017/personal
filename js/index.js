@@ -36,43 +36,31 @@ $(function() {
 })();
 
 
+//导航
+(function(){
+    var navSelect = $("#navSelect"),
+        selectLi = navSelect.find("li"),
+        navCurrent = $("#navCurrent"),
+        navs = 0,
+        curnavs = 0,
+        num = 120;
 
-var navSelect = document.getElementById('navSelect');
-var selectLi = navSelect.getElementsByTagName('li');
-var navCurrent = document.getElementById("navCurrent");
-var navs = 0;
-var curnavs = 0;
-var navTime = null;
-for (var i = 0; i < selectLi.length; i++) {
-	selectLi[i].onmouseover = (function(num) {
-		return function() {
-			navs = num;
+    animas( navs );
 
-		}
-	})(i);
-	selectLi[i].onmouseout = (function(num) {
-		return function() {
-			navs = 0;
-		}
-	})(i);
-}
+    selectLi.on("mouseover" , function(){
+        curnavs = $(this).index() - 1;
+        animas( curnavs )
+    });
+    selectLi.on("mouseout" , function(){
+        animas( navs )
+    });
 
-navTime = setInterval(navMove, 10)
-
-function navMove() {
-	if (navCurrent.offsetLeft < 120 * navs) {
-		navCurrent.style.left = navCurrent.offsetLeft + 10 + "px";
-		curnavs = navs;
-	} else if (navs < curnavs) {
-		navCurrent.style.left = navCurrent.offsetLeft - 10 + "px";
-	} else if (navs == 0) {
-		if (navCurrent.offsetLeft > 0) {
-			navCurrent.style.left = navCurrent.offsetLeft - 10 + "px";
-
-
-		}
-	}
-}
+    function animas( type ){
+        navCurrent.stop().animate({
+            left : type * num + "px"
+        });
+    };
+})();
 
 
 var mySwiper = new Swiper('.swiper-container', {
@@ -207,7 +195,7 @@ var mySwiper = new Swiper('.swiper-container', {
 
 
 			$(".slide_ThreeBox ul li.li3").delay(2800).animate({
-				"width": "170px"
+				"width": "240px"
 			}, 500)
 
 
